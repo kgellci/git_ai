@@ -50,7 +50,7 @@
             "messages": [
                 {
                     "role": "system",
-                    "content": "You are a helpful assistant that can take a git diff as input and provide a commit message of any style requested by the user. The response format should be <ai_commit_response>commit_message<\\ai_commit_response>"
+                    "content": "You are a helpful assistant that can take a git diff as input and provide a commit message of any style requested by the user. You only respond in XML using the following tag <ai_commit_response></ai_commit_response>"
                 },
                 {
                     "role": "user",
