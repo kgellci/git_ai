@@ -116,6 +116,38 @@ To make running the `ai_commit.sh` script even easier, you can set up a Git alia
     git-ai-commit
     ```
 
+### Bash or Other Terminals
+
+1. Open your terminal.
+
+2. Edit your shell configuration file (e.g., `.bashrc`, `.bash_profile`, or `.profile`):
+
+    ```bash
+    nano ~/.bashrc
+    ```
+
+3. Add the following lines to create the alias:
+
+    ```bash
+    alias git-ai-commit='/path/to/ai_commit.sh'
+    ```
+
+    Replace `/path/to` with the actual path to the directory containing the `ai_commit.sh` script.
+
+4. Save and exit the text editor.
+
+5. Apply the changes:
+
+    ```bash
+    source ~/.bashrc
+    ```
+
+6. Now you can use the alias to generate commit messages:
+
+    ```bash
+    git-ai-commit
+    ```
+
 ## Customization
 
 Feel free to modify the script according to your needs. You can adjust the prompts, the model used for text generation, and the formatting of commit messages. The script provides a foundation for integrating AI-generated commit messages into your workflow.
