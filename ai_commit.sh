@@ -37,15 +37,24 @@
     generate_commit_message() {
         local diff="$1"
         escaped_diff=$(escape_to_json "$diff")
-        local prompt="Write a short and concise commit message for the following diff:\n\n'$escaped_diff'"
+
+        if [ -z "$OVERRIDE_PROMPT" ]; then
+            local prompt="Write a short and concise commit message."
+        else
+            local prompt=$OVERRIDE_PROMPT
+        fi
 
         # Construct the JSON request body
         request_body='{
             "model": "gpt-3.5-turbo",
             "messages": [
                 {
+                    "role": "system",
+                    "content": "You are a helpful assistant that can take a git diff as input and provide a commit message of any style requested by the user. The response format should be <ai_commit_response>commit_message<\\ai_commit_response>"
+                },
+                {
                     "role": "user",
-                    "content": "'"$prompt"'"
+                    "content": "'$prompt'\n\ndiff:\n'$escaped_diff'"
                 }
             ]
         }'
@@ -54,7 +63,7 @@
         commit_message=$(curl -s -X POST "https://api.openai.com/v1/chat/completions" \
                             -H "Content-Type: application/json" \
                             -H "Authorization: Bearer $API_KEY" \
-                            -d "$request_body" | grep -o '"content": "[^"]*' | sed 's/"content": "//')
+                            -d "$request_body" | grep -o '<ai_commit_response>[^<]*</ai_commit_response>' | sed 's/<ai_commit_response>//; s/<\/ai_commit_response>//')
         
         echo "$commit_message"
     }
