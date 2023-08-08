@@ -45,6 +45,20 @@ Before using the script, make sure you have the following:
 
 7. If you choose to commit the changes with the generated message, the script will automatically create a commit using Git with the generated commit message.
 
+### config.txt
+
+1. Create a file named `config.txt` in the same directory as the script.
+
+2. Open `config.txt` in a text editor and any of the supported keys:
+
+    ```txt
+    # (required) OpenAI API key
+    API_KEY="your_actual_api_key_here"
+
+    # (optional) Override for the ai prompt
+    OVERRIDE_PROMPT="Write your custom commit message prompt here such as: Write a commit message using only emoji's for the given diff."
+    ```
+
 ## Adding an Alias (Optional)
 
 Please note that the alias is completely optional, but it can save you even more time by providing a shorter and more memorable command for generating AI-generated commit messages.
@@ -151,6 +165,7 @@ To make running the `ai_commit.sh` script even easier, you can set up a Git alia
 ## Customization
 
 Feel free to modify the script according to your needs. You can adjust the prompts, the model used for text generation, and the formatting of commit messages. The script provides a foundation for integrating AI-generated commit messages into your workflow.
+
 
 ## Disclaimer
 
