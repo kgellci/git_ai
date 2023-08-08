@@ -47,6 +47,10 @@ Before using the script, make sure you have the following:
 
 ## Adding an Alias (Optional)
 
+Please note that the alias is completely optional, but it can save you even more time by providing a shorter and more memorable command for generating AI-generated commit messages.
+
+### Git alias
+
 To make running the `ai_commit.sh` script even easier, you can set up a Git alias that maps to the script. This way, you can use a shorter command to invoke the script whenever you want to generate a commit message.
 
 1. Open your terminal and navigate to your home directory by running:
@@ -80,7 +84,37 @@ To make running the `ai_commit.sh` script even easier, you can set up a Git alia
 
     The script will be executed, and you'll be guided through the process of generating and committing a message.
 
-Please note that the alias is completely optional, but it can save you even more time by providing a shorter and more memorable command for generating AI-generated commit messages.
+### Zsh
+
+1. Open your terminal.
+
+2. Edit your Zsh configuration file:
+
+    ```bash
+    nano ~/.zshrc
+    ```
+
+3. Add the following lines to create the alias:
+
+    ```bash
+    alias git-ai-commit='/path/to/ai_commit.sh'
+    ```
+
+    Replace `/path/to` with the actual path to the directory containing the `ai_commit.sh` script.
+
+4. Save and exit the text editor.
+
+5. Apply the changes:
+
+    ```bash
+    source ~/.zshrc
+    ```
+
+6. Now you can use the alias to generate commit messages:
+
+    ```bash
+    git-ai-commit
+    ```
 
 ## Customization
 
