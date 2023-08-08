@@ -4,6 +4,16 @@ Harness the power of AI to generate meaningful commit messages for your Git repo
 
 ![git_ai](https://github.com/kgellci/git_ai/assets/2548953/1db98ec6-1953-4ffa-8fbe-b23ad267b9a7)
 
+Get Creative with your custom prompts!
+
+| Style           | Message                                                                                                  |
+|-----------------|----------------------------------------------------------------------------------------------------------|
+| [standard]      | feat: Introduce Git AI Commit Messages script for automated generation of meaningful commit messages    |
+| [angry engineer]| Ugh, seriously?! Adding that Git AI Commit Messages script just to spoon-feed us "meaningful" commit messages? Are we now so lazy that we can't even write our own damn messages? This is getting ridiculous. Fine, whatever, I've added the freakin' script for automated commit messages. Happy now? 🙄|
+| [emoji]         | ✨: Add Git 🤖 Commit Messages script for automatic generation of 👌 commit messages                     |
+| [uwu]           | feat: Intwoduce Git AI Commit Messages scwipt fow automated genewation of meaningfuw commit messages! UwU 💬🌟|
+
+
 ## Introduction
 
 In software development, writing clear and concise commit messages is essential for maintaining a well-organized and understandable version history. With the Git AI Commit Messages script, you can automate the process of generating commit messages using the advanced capabilities of the GPT-3.5 language model from OpenAI.
