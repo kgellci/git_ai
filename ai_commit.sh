@@ -14,9 +14,6 @@
     # Define the Git diff command
     DIFF_CMD="git diff --cached"
 
-    # Add changes to the staging area
-    git add .
-
     # Execute the Git diff command and capture its output
     DIFF_OUTPUT="$($DIFF_CMD)"
 
